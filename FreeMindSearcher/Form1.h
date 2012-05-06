@@ -60,10 +60,13 @@ namespace FreeMindSearcher {
 
   private: System::Windows::Forms::TextBox^  folderPath;
 
+
+
+
+  private: System::Windows::Forms::Button^  button1;
   private: System::Windows::Forms::DataGridViewLinkColumn^  fileName;
   private: System::Windows::Forms::DataGridViewTextBoxColumn^  text;
   private: System::Windows::Forms::DataGridViewLinkColumn^  directory;
-  private: System::Windows::Forms::Button^  button1;
 
 	private:
 		/// <summary>
@@ -108,8 +111,8 @@ namespace FreeMindSearcher {
       this->hitList->Name = L"hitList";
       this->hitList->ReadOnly = true;
       this->hitList->RowTemplate->Height = 21;
-      this->hitList->Size = System::Drawing::Size(736, 397);
-      this->hitList->TabIndex = 0;
+      this->hitList->Size = System::Drawing::Size(736, 426);
+      this->hitList->TabIndex = 4;
       // 
       // fileName
       // 
@@ -122,6 +125,7 @@ namespace FreeMindSearcher {
       this->text->HeaderText = L"Text";
       this->text->Name = L"text";
       this->text->ReadOnly = true;
+      this->text->Width = 500;
       // 
       // directory
       // 
@@ -134,7 +138,7 @@ namespace FreeMindSearcher {
       this->searchButton->Location = System::Drawing::Point(673, 4);
       this->searchButton->Name = L"searchButton";
       this->searchButton->Size = System::Drawing::Size(75, 46);
-      this->searchButton->TabIndex = 1;
+      this->searchButton->TabIndex = 3;
       this->searchButton->Text = L"&Search";
       this->searchButton->UseVisualStyleBackColor = true;
       this->searchButton->Click += gcnew System::EventHandler(this, &Form1::searchButton_Click);
@@ -145,7 +149,7 @@ namespace FreeMindSearcher {
       this->wordsComboBox->Location = System::Drawing::Point(52, 6);
       this->wordsComboBox->Name = L"wordsComboBox";
       this->wordsComboBox->Size = System::Drawing::Size(615, 20);
-      this->wordsComboBox->TabIndex = 3;
+      this->wordsComboBox->TabIndex = 0;
       // 
       // label1
       // 
@@ -153,7 +157,7 @@ namespace FreeMindSearcher {
       this->label1->Location = System::Drawing::Point(10, 9);
       this->label1->Name = L"label1";
       this->label1->Size = System::Drawing::Size(36, 12);
-      this->label1->TabIndex = 4;
+      this->label1->TabIndex = 6;
       this->label1->Text = L"Words";
       // 
       // label2
@@ -162,7 +166,7 @@ namespace FreeMindSearcher {
       this->label2->Location = System::Drawing::Point(10, 32);
       this->label2->Name = L"label2";
       this->label2->Size = System::Drawing::Size(52, 12);
-      this->label2->TabIndex = 5;
+      this->label2->TabIndex = 7;
       this->label2->Text = L"Directory";
       // 
       // targetDialog
@@ -174,7 +178,7 @@ namespace FreeMindSearcher {
       this->folderBrowseButton->Location = System::Drawing::Point(643, 27);
       this->folderBrowseButton->Name = L"folderBrowseButton";
       this->folderBrowseButton->Size = System::Drawing::Size(24, 23);
-      this->folderBrowseButton->TabIndex = 6;
+      this->folderBrowseButton->TabIndex = 2;
       this->folderBrowseButton->Text = L"...";
       this->folderBrowseButton->UseVisualStyleBackColor = true;
       this->folderBrowseButton->Click += gcnew System::EventHandler(this, &Form1::folderBrowseButton_Click);
@@ -184,7 +188,7 @@ namespace FreeMindSearcher {
       this->folderPath->Location = System::Drawing::Point(68, 29);
       this->folderPath->Name = L"folderPath";
       this->folderPath->Size = System::Drawing::Size(575, 19);
-      this->folderPath->TabIndex = 7;
+      this->folderPath->TabIndex = 1;
       // 
       // button1
       // 
@@ -192,9 +196,10 @@ namespace FreeMindSearcher {
       this->button1->Location = System::Drawing::Point(673, 459);
       this->button1->Name = L"button1";
       this->button1->Size = System::Drawing::Size(75, 23);
-      this->button1->TabIndex = 8;
+      this->button1->TabIndex = 5;
       this->button1->Text = L"button1";
       this->button1->UseVisualStyleBackColor = true;
+      this->button1->Visible = false;
       // 
       // Form1
       // 
